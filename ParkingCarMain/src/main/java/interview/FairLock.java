@@ -65,7 +65,7 @@ public class FairLock {
     /**
      * 内部类
       */
-    public class QueueObject {
+    public static class QueueObject {
 
         private boolean isNotified = false;
 
