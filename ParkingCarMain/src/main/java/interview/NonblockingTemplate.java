@@ -1,12 +1,33 @@
 package interview;
 
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
 /**
  * Created by shikeyue on 17/6/13.
  */
 public class NonblockingTemplate {
+
+    private AtomicInteger value;
+
+    public int getValue() {
+        return value.get();
+    }
+
+    public int increaseMethod() {
+        int v;
+        do {
+            v = getValue();
+        }
+        while (!value.compareAndSet(v, v + 1));
+
+        return v + 1;
+
+
+    }
+
+
 
     public static class IntendedModification {
         public AtomicBoolean completed = new AtomicBoolean(false);
