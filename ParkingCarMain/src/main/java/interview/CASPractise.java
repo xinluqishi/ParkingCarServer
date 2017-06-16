@@ -1,5 +1,7 @@
 package interview;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -89,8 +91,10 @@ public class CASPractise {
         refT1.join();
         refT2.join();
 
-    }
 
+        Map<String, String> map = new HashMap<>();
+
+    }
 
 
 }
