@@ -32,7 +32,7 @@ public class ProducerConsumer1 {
                         Object newObject = new Object();
                         if (shareHouse.add(newObject)) {
                             System.out.println("Producer put a new Object");
-                            Thread.sleep((long) (Math.random() * 3000));
+//                            Thread.sleep((long) (Math.random() * 3000));
                             shareHouse.notify();
                         }
 
@@ -59,7 +59,7 @@ public class ProducerConsumer1 {
 
                         shareHouse.removeLast();
                         System.out.println("Consumer consumer a new Object");
-                        Thread.sleep((long) (Math.random() * 3000));
+//                        Thread.sleep((long) (Math.random() * 3000));
                         shareHouse.notify();
 
 
