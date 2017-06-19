@@ -34,4 +34,39 @@ public class TreeNode {
         parent.addChildOnly(this);
     }
 
+
+    static TreeNode parentt = new TreeNode();
+    static TreeNode child = new TreeNode();
+
+    static Runnable run1 = new Runnable() {
+
+        @Override
+        public void run() {
+            child.setParent(parentt);
+            System.out.println("child done");
+            parentt.addChild(child);
+            System.out.println("parent done");
+        }
+    };
+
+    static Runnable run2 = new Runnable() {
+        @Override
+        public void run() {
+            parentt.addChild(child);
+            System.out.println("parent done");
+            child.setParent(parentt);
+            System.out.println("child done");
+        }
+    };
+
+    public static void main(String[] args) {
+
+        Thread t1 = new Thread(run1);
+        Thread t2 = new Thread(run2);
+
+        t1.start();
+        t2.start();
+
+    }
+
 }
