@@ -79,6 +79,15 @@ public class SlippedCondition {
 //                lockingThread = Thread.currentThread();
 //            }
         }
+
+
+    }
+
+    private static String a = "a";
+    private String ab = "ab";
+
+    private void staMethod() {
+        a = "ss";
     }
 
 
@@ -87,12 +96,13 @@ public class SlippedCondition {
 
 
 
+    public static void main(String[] args) {
 
+        for (int i=0; i++ < 10; i++) {
+            System.out.println("i : " + ++i);
+        }
 
-
-
-
-
+    }
 
 
 

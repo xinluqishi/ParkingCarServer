@@ -32,4 +32,11 @@ public class SingleExample {
 
     }
 
+    private SingleExample() {
+    }
+
+    public static void main(String[] args) {
+        SingleExample singleExample = new SingleExample();
+    }
+
 }

@@ -1,8 +1,6 @@
 package interview;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by shikeyue on 2017/6/17.
